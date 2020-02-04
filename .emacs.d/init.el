@@ -89,14 +89,15 @@ There are two things you can do about this warning:
   :config
   (setq calendar-latitude 29.6)
   (setq calendar-longitude -98.6)
-  (setq circadian-themes '((:sunrise . leuven)
-                            (:sunset  . leuven)))
+  (setq circadian-themes '((:sunrise . leuven )
+                           (:sunset  . zenburn)))
   (circadian-setup))
 
 ;; C customizations
 (defun my-c-mode-hook ()
+  (c-set-style "bsd")
   (setq indent-tabs-mode nil)
-  (setq c-basic-offset 3)
+  (setq c-basic-offset 4)
   (column-enforce-mode)
   )
 (add-hook 'c-mode-common-hook 'my-c-mode-hook)
