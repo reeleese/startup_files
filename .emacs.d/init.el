@@ -90,7 +90,7 @@ There are two things you can do about this warning:
   (setq calendar-latitude 29.6)
   (setq calendar-longitude -98.6)
   (setq circadian-themes '((:sunrise . leuven )
-                           (:sunset  . zenburn)))
+                           (:sunset  . leuven )))
   (circadian-setup))
 
 ;; C customizations
@@ -98,6 +98,5 @@ There are two things you can do about this warning:
   (c-set-style "bsd")
   (setq indent-tabs-mode nil)
   (setq c-basic-offset 4)
-  (column-enforce-mode)
   )
 (add-hook 'c-mode-common-hook 'my-c-mode-hook)
