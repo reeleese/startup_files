@@ -66,17 +66,8 @@ There are two things you can do about this warning:
  ;; If there is more than one, they won't work right.
  )
 
-;;; I prefer cmd key for meta
-(if(eq system-type 'darwin)
-    (setq mac-option-key-is-meta nil
-	  mac-command-key-is-meta t
-	  mac-command-modifier 'meta
-	  mac-option-modifier 'none)
-  )
-
 ;; Startup stuff
 (defun my-startup-hook ()
-  (server-start)
   (scroll-bar-mode -1)
   (when (version<= "26.0.50" emacs-version )
     (global-display-line-numbers-mode))
