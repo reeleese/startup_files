@@ -24,12 +24,41 @@ There are two things you can do about this warning:
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(company-quickhelp-color-background "#4F4F4F")
+ '(company-quickhelp-color-foreground "#DCDCCC")
  '(custom-safe-themes
    (quote
-    ("40670c1a2158e4387407ca1c8a06c03153baca5016e3f9f23d7fb4157e408960" default)))
+    ("fa2af0c40576f3bde32290d7f4e7aa865eb6bf7ebe31eb9e37c32aa6f4ae8d10" "ec5f697561eaf87b1d3b087dd28e61a2fc9860e4c862ea8e6b0b77bd4967d0ba" "40670c1a2158e4387407ca1c8a06c03153baca5016e3f9f23d7fb4157e408960" default)))
+ '(fci-rule-color "#383838")
+ '(nrepl-message-colors
+   (quote
+    ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
  '(package-selected-packages
    (quote
-    (zenburn-theme circadian magit leuven-theme column-enforce-mode))))
+    (extempore-mode zenburn-theme circadian magit leuven-theme column-enforce-mode)))
+ '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
+ '(vc-annotate-background "#2B2B2B")
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#BC8383")
+     (40 . "#CC9393")
+     (60 . "#DFAF8F")
+     (80 . "#D0BF8F")
+     (100 . "#E0CF9F")
+     (120 . "#F0DFAF")
+     (140 . "#5F7F5F")
+     (160 . "#7F9F7F")
+     (180 . "#8FB28F")
+     (200 . "#9FC59F")
+     (220 . "#AFD8AF")
+     (240 . "#BFEBBF")
+     (260 . "#93E0E3")
+     (280 . "#6CA0A3")
+     (300 . "#7CB8BB")
+     (320 . "#8CD0D3")
+     (340 . "#94BFF3")
+     (360 . "#DC8CC3"))))
+ '(vc-annotate-very-old-color "#DC8CC3"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -61,14 +90,13 @@ There are two things you can do about this warning:
   (setq calendar-latitude 29.6)
   (setq calendar-longitude -98.6)
   (setq circadian-themes '((:sunrise . leuven)
-                            (:sunset  . zenburn)))
+                            (:sunset  . leuven)))
   (circadian-setup))
 
 ;; C customizations
 (defun my-c-mode-hook ()
   (setq indent-tabs-mode nil)
-  (setq-default c-basic-offset 4)
+  (setq c-basic-offset 3)
   (column-enforce-mode)
   )
-(add-hook 'c-mode-hook 'my-c-mode-hook)
-
+(add-hook 'c-mode-common-hook 'my-c-mode-hook)
